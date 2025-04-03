@@ -29,7 +29,7 @@ from pathlib import Path
 
 import FreeCAD
 import FreeCADGui
-from PySide2 import QtWidgets, QtGui
+from PySide.QtCore import QCoreApplication
 
 from Rebarfunc import getdictofNumberDiameterOffset
 
@@ -45,7 +45,7 @@ class _NumberDiameterOffsetDialog:
             str(Path(__file__).with_suffix(".ui"))
         )
         self.form.setWindowTitle(
-            QtWidgets.QApplication.translate(
+            QCoreApplication.translate(
                 "Arch", "Rebar Number Diameter Offset", None
             )
         )
